@@ -1,0 +1,32 @@
+.event_back {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.event_back:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.event_content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.event_data {
+    margin-bottom: 10px;
+}
+
+.event_data_name {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.event_data_value {
+    font-size: 18px;
+}
+

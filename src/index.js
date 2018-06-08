@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import './layout/index.css';
-import 'normalize.css';
 
 import App from './components/App';
 import configureStore from './redux/store';

@@ -28,8 +28,8 @@ class Home extends Component {
 
 function mapStateToProps(state) {
     return {
-        loading: state.status === Status.Requesting,
-        events: state.response ? state.response.results : []
+        loading: state.home.status === Status.Requesting,
+        events: state.home.response ? state.home.response.results : []
     }
 }
 

@@ -1,6 +1,6 @@
 export const Types = {
     TopEvents: Symbol('TopEvents'),
-    Events: Symbol('Events')
+    Event: Symbol('Event'),
 }
 
 export const Status = {
