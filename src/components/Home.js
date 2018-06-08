@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchTopEvents } from '../redux/actions';
+import { fetchTopEvents, Status } from '../redux/actions';
+import EventRow from './EventRow';
+
+import '../layout/home.css';
 
 class Home extends Component {
 
@@ -10,10 +13,14 @@ class Home extends Component {
     }
 
     render() {
-        const { events } = this.props
+        const { events, loading } = this.props
         return (
             <div className="home">
-                { events.map(event => <div key={event.id}>{event.name}</div>) }
+                <h1>Top Events</h1>
+                { loading && <div className="loading">Loading...</div>}
+                <div className="event-rows">
+                    { events.map(event => <EventRow key={event.id} event={event} /> ) }
+                </div>
             </div>
         );
     }
@@ -21,6 +28,7 @@ class Home extends Component {
 
 function mapStateToProps(state) {
     return {
+        loading: state.status === Status.Requesting,
         events: state.response ? state.response.results : []
     }
 }
